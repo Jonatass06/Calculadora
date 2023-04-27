@@ -28,7 +28,7 @@ export class CalculadoraComponent {
       if(this.textoB.slice(-1) == "+" || this.textoB.slice(-1) == "/" || this.textoB.slice(-1) == "*" || this.textoB.slice(-1) == "-"){
         this.textoB = this.textoB.substring(0, this.textoB.length - 1);
       }
-      this.textoB = eval(this.textoB).toString()
+      this.textoB = eval(this.textoB).toFixed(10).toString()
       this.igual = true;
     } 
     else if (texto == ".") {
